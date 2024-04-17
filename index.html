@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="header">
+         <div class="container">
+            <nav>
+                <img src="" alt="">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Education</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>Aspiring Web Developer</p>
+                <h1>Hey,Myself <span>Fareeda Kousar</span></h1>
+
+             <br><p>Welcome to my Portfolio!</p>
+            </div>
+         </div>
+    </div>
+    <!-- -----about ----->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="myimage.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi! I'm Fareeda Kousar, a graduate with a Bachelor of Computer Science degree.<br> I'm passionate about using technology to solve problems and create innovative solutions.
+
+                     I'm eager to contribute my skills and adaptability to a company where I can continuously learn and grow. 
+                    
+                   I take pride in giving my best and believe in approaching every project with dedication and a collaborative spirit. <br>
+                    
+                    <h4>Welcome to my portfolio! Take a look at my projects to see my work in action, and feel free to reach out if you have any questions.</h4>
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>FrontEnd Technologies</li>
+                        <li><span>App Development</span><br> Core JAVA</li>
+                        <li><span>DataBase</span><br>SQL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2023</span><br>Bachelor of Computer Science</li>
+                        <p>Dr Jyothirmayi Degree College</p>
+                        <li><span>2018-2020</span><br>Intermediate</li>
+                        <p>Narayana Junior College</p>
+                        <li><span>2017-2018</span><br>SSC</li>
+                        <p>National High School</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <!-- ------------portfolio------------- -->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class= "work-list"> 
+            <div class="work">
+                <img src="food delivery mobile app.jpg" alt="">
+                <div class="layer">
+                    <h3>Food Delivery App</h3>
+                    <p>Created Zomato Website with features like clean and appealing layouts,responsive design and interactive elements
+                    </p>
+                    <a href="https://fareedakousar.github.io/Mainzomatoproject.guthub.io/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="To do list.jpg" alt="">
+                <div class="layer">
+                <h3>ToDO App</h3>
+                <p>It provides a user-friendly interface for managing tasks and staying organized.
+                    It features like adding tasks,viewing,mark tasks completed and also delete tasks.
+                </p>
+                <a href="https://fareedakousar.github.io/ToDoAPP/"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+            <div class="work">
+                <img src="Invoice Generator UI 01.jpg" alt="">
+                <div class="layer">
+                <h3>Random Quote Generator</h3>
+                <p>It provides users with a daily dose of inspiration and wisdom through thought-provoking quotes from various authors.
+                    It enhance the features like clear quote presentation,author attribution,background customization and responsiveness. 
+                </p>
+                <a href="https://fareedakousar.github.io/RandomQuoteGeneratorMain/"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        </div>
+           <a href="#" class="btn">See more</a>
+
+    </div>
+   </div>
+ <!-- ----contact----- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>fareedakousar44@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +91 9182689920</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>  
+                </div>
+                <a href="resume-FK.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+     
+</div>
+
+<script>
+   
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/f0145bdc2e.js" crossorigin="anonymous"></script>
+</body>
+</html>
